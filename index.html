@@ -1,0 +1,41 @@
+<html>
+<head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
+<body>
+<a-scene id="scene" visible="true">
+    <!-- The assets for the lobby -->
+    <a-assets>
+        <!-- The imgs assets -->
+        <a-asset-item id="lobby" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg"></a-asset-item>
+        <!-- The 3D models assets -->
+        <a-asset-item id="amphi_nord" src="assets/models/amphi_nord.glb"></a-asset-item>
+        <a-asset-item id="bu" src="assets/models/bu.glb"></a-asset-item>
+        <a-asset-item id="fab_lab" src="assets/models/fab_lab.glb"></a-asset-item>
+        <a-asset-item id="green_room" src="assets/models/green_room.glb"></a-asset-item>
+        <a-asset-item id="irimas" src="assets/models/irimas.glb"></a-asset-item>
+        <a-asset-item id="mac_room" src="assets/models/mac_room.glb"></a-asset-item>
+        <a-asset-item id="pause_room" src="assets/models/pause_room.glb"></a-asset-item>
+        <a-asset-item id="ru" src="assets/models/ru.glb"></a-asset-item>
+        <a-asset-item id="sgm" src="assets/models/sgm.glb"></a-asset-item>
+        <a-asset-item id="lpmt" src="assets/models/lpmt.glb"></a-asset-item>
+    </a-assets>
+    <!-- Add the 360 image -->
+    <!-- Skybox -->
+    <a-sky src="#lobby" rotation="0 -130 0"
+           id="skyboxbg"></a-sky>
+    <!-- The objects in the scene for the lobby -->
+    <a-entity gltf-model="#amphi_nord" class="modelLobby" position="-1.54935 0.5 2.06414" scale="2 2 2" rotation="0 -45 0"></a-entity>
+    <a-entity gltf-model="#bu" class="modelLobby" position="-2.84492 0.5 0.22097" scale="0.002 0.002 0.002" rotation="0 100 0"></a-entity>
+    <a-entity gltf-model="#fab_lab" class="modelLobby" position="0 0.5 3" scale="0.04 0.04 0.04" rotation="90 0 0"></a-entity>
+    <a-entity gltf-model="#green_room" class="modelLobby" position="1.99916 0.5 4.98037" scale="0.1 0.1 0.1" rotation="0 -55 0"></a-entity>
+    <a-entity gltf-model="#irimas" class="modelLobby" position="2.91891 0.5 -0.81471" scale="0.1 0.1 0.1" rotation="0 45 0"></a-entity>
+    <a-entity gltf-model="#mac_room" class="modelLobby" position="2.79994 0.5 1.13005" scale="0.006 0.006 0.006" rotation="0 160 0"></a-entity>
+    <a-entity gltf-model="#pause_room" class="modelLobby" position="-3.93377 -7.4 -0.04532" scale="4 4 4" rotation="0 45 0"></a-entity>
+    <a-entity gltf-model="#ru" class="modelLobby" position="-1.58886 0.5 -2.6317" scale="0.8 0.8 0.8" rotation="0 45 0"></a-entity>
+    <a-entity gltf-model="#sgm" class="modelLobby" position="0.6267 0.7 -2.93117" scale="0.1 0.1 0.1" rotation="0 45 0"></a-entity>
+    <a-entity gltf-model="#lpmt" class="modelLobby" position="-14.384 0.5 2.381" scale="0.8 0.8 0.6" rotation="0 45 0"></a-entity>
+</a-scene>
+<script src="js/index.js"></script>
+</body>
+</html>
