@@ -1,12 +1,14 @@
 <html lang="fr">
     <head>
-        <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.misc.min.js"></script>
         <script src="https://unpkg.com/super-hands@^3.0.3/dist/super-hands.min.js"></script>
+        <script src="https://unpkg.com/aframe-event-set-component@^4.1.1/dist/aframe-event-set-component.min.js"></script>
         <title>Visite Virtuelle IUT Mulhouse</title>
     </head>
     <body>
         <a-scene id="scene" visible="true">
-            
+
             <!-- The assets -->
             <a-assets>
                 <!-- The imgs assets -->
@@ -69,6 +71,17 @@
             <!-- VR interaction -->
             <a-entity sphere-collider="objects: a-box" mixin="physics-hands" super-hands hand-controls="hand: left"></a-entity>
             <a-entity sphere-collider="objects: a-box" mixin="physics-hands" super-hands hand-controls="hand: right"></a-entity>
+
+            <!-- Camera -->
+            <a-entity camera wasd-controls position="0 1 1"
+                      capture-mouse
+                      raycaster cursor="rayOrigin:mouse"
+                      body="type: static; shape: sphere; sphereRadius: 0.001"
+                      super-hands="colliderEvent: raycaster-intersection;
+                             colliderEventProperty: els;
+                             colliderEndEvent:raycaster-intersection-cleared;
+                             colliderEndEventProperty: clearedEls;">
+            </a-entity>
 
             <!-- The items in the lobby -->
             <a-entity
@@ -138,11 +151,7 @@
                     gltf-model="#arrow"
                     position="-3 -1 0" scale="0.5 0.5 0.5" rotation="-90 0 0" visible="false"
             ></a-entity>
-            <a-camera>
-                <a-cursor>
-            </a-camera>
         </a-scene>
-
         <script src="js"></script>
     </body>
 </html>
