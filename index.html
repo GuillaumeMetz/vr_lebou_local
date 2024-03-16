@@ -1,42 +1,148 @@
-<html>
-<head>
-    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-</head>
-<body>
-<a-scene id="scene" visible="true">
-    <!-- The assets for the lobby -->
-    <a-assets>
-        <!-- The imgs assets -->
-        <a-asset-item id="lobby" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg"></a-asset-item>
-        <!-- The 3D models assets -->
-        <a-asset-item id="amphi_nord" src="assets/models/amphi_nord.glb"></a-asset-item>
-        <a-asset-item id="bu" src="assets/models/bu.glb"></a-asset-item>
-        <a-asset-item id="fab_lab" src="assets/models/fab_lab.glb"></a-asset-item>
-        <a-asset-item id="green_room" src="assets/models/green_room.glb"></a-asset-item>
-        <a-asset-item id="irimas" src="assets/models/irimas.glb"></a-asset-item>
-        <a-asset-item id="mac_room" src="assets/models/mac_room.glb"></a-asset-item>
-        <a-asset-item id="pause_room" src="assets/models/pause_room.glb"></a-asset-item>
-        <a-asset-item id="ru" src="assets/models/ru.glb"></a-asset-item>
-        <a-asset-item id="sgm" src="assets/models/sgm.glb"></a-asset-item>
-        <a-asset-item id="lpmt" src="assets/models/lpmt.glb"></a-asset-item>
-    </a-assets>
-    <!-- Add the 360 image -->
-    <!-- Skybox -->
-    <a-sky src="#lobby" rotation="0 -130 0"
-           id="skyboxbg"></a-sky>
-    <!-- The objects in the scene for the lobby -->
-    <a-entity gltf-model="#amphi_nord" class="modelLobby" position="-1.03643 0.5 1.34875" scale="1.6 1.6 1.6" rotation="0 -45 0"></a-entity>
-    <a-entity gltf-model="#bu" class="modelLobby" position="-1.98349 0.5 -0.1097" scale="0.002 0.002 0.002" rotation="0 92 0"></a-entity>
-    <a-entity gltf-model="#fab_lab" class="modelLobby" position="0 0.5 2" scale="0.04 0.04 0.04" rotation="90 0 0"></a-entity>
-    <a-entity gltf-model="#green_room" class="modelLobby" position="1.57575 0.5 4.03938" scale="0.1 0.1 0.1" rotation="0 -55 0"></a-entity>
-    <a-entity gltf-model="#irimas" class="modelLobby" position="1.90424 0.5 -0.51613" scale="0.1 0.1 0.1" rotation="0 20 0"></a-entity>
-    <a-entity gltf-model="#mac_room" class="modelLobby" position="1.94992 0.5 0.44807" scale="0.006 0.006 0.006" rotation="0 170 0"></a-entity>
-    <a-entity gltf-model="#pause_room" class="modelLobby" position="-2.9377 -7.4 0.26496" scale="4 4 4" rotation="0 45 0"></a-entity>
-    <a-entity gltf-model="#ru" class="modelLobby" position="-1.01287 0.5 -1.80895" scale="0.8 0.8 0.8" rotation="0 45 0"></a-entity>
-    <a-entity gltf-model="#sgm" class="modelLobby" position="0.44181 0.7 -1.90219" scale="0.1 0.1 0.1" rotation="0 45 0"></a-entity>
-    <a-entity gltf-model="#lpmt" class="modelLobby" position="-21.865 0.5 1.581" scale="" rotation="0 45 0"></a-entity>
-    <a-entity geometry="primitive: circle; radius: 2" rotation="-90 0 0"></a-entity>
-</a-scene>
-<script src="js/index.js"></script>
-</body>
+<html lang="fr">
+    <head>
+        <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+        <script src="https://unpkg.com/super-hands@^3.0.3/dist/super-hands.min.js"></script>
+        <title>Visite Virtuelle IUT Mulhouse</title>
+    </head>
+    <body>
+        <a-scene id="scene" visible="true">
+            
+            <!-- The assets -->
+            <a-assets>
+                <!-- The imgs assets -->
+                <img id="lobbyBG" src="assets/scenes/1_lobby.jpg" />
+                <img id="buBG" src="assets/scenes/2_bu.jpg" />
+                <img id="ruBG" src="assets/scenes/3_ru.jpg" />
+                <img id="irimasBG" src="assets/scenes/4_irimas.jpg" />
+                <img id="amphiNordBG" src="assets/scenes/5_amphi_nord.jpg" />
+                <img id="fabLabBG" src="assets/scenes/7_fablab.jpg" />
+                <img id="fondVertBG" src="assets/scenes/8_fond_vert.jpg" />
+                <img id="macBG" src="assets/scenes/6_mac.jpg" />
+                <img id="lpmtBG" src="assets/scenes/9_lpmt.jpg" />
+                <img id="pauseBG" src="assets/scenes/10_pause.jpg" />
+                <img id="sgmBG" src="assets/scenes/11_sgm.jpg" />
+
+                <!-- The 3D models assets -->
+                <a-asset-item id="bu" src="assets/models/bu.glb"></a-asset-item>
+                <a-asset-item id="ru" src="assets/models/ru.glb"></a-asset-item>
+                <a-asset-item
+                    id="irimas"
+                    src="assets/models/irimas.glb"
+                ></a-asset-item>
+                <a-asset-item
+                    id="amphiNord"
+                    src="assets/models/amphi_nord.glb"
+                ></a-asset-item>
+                <a-asset-item
+                    id="fabLab"
+                    src="assets/models/fab_lab.glb"
+                ></a-asset-item>
+                <a-asset-item
+                    id="fondVert"
+                    src="assets/models/green_room.glb"
+                ></a-asset-item>
+                <a-asset-item
+                    id="mac"
+                    src="assets/models/mac_room.glb"
+                ></a-asset-item>
+                <a-asset-item
+                    id="lpmt"
+                    src="assets/models/lpmt.glb"
+                ></a-asset-item>
+                <a-asset-item
+                    id="pause"
+                    src="assets/models/pause_room.glb"
+                ></a-asset-item>
+                <a-asset-item
+                    id="sgm"
+                    src="assets/models/sgm.glb"
+                ></a-asset-item>
+                <a-asset-item
+                    id="arrow"
+                    src="assets/models/arrow.glb"
+                ></a-asset-item>
+            </a-assets>
+
+            <!-- Skybox -->
+            <a-sky src="#lobbyBG" id="skyboxbg"></a-sky>
+
+            <!-- VR interaction -->
+            <a-entity sphere-collider="objects: a-box" mixin="physics-hands" super-hands hand-controls="hand: left"></a-entity>
+            <a-entity sphere-collider="objects: a-box" mixin="physics-hands" super-hands hand-controls="hand: right"></a-entity>
+
+            <!-- The items in the lobby -->
+            <a-entity
+                gltf-model="#bu"
+                id="bu"
+                class="item"
+                position="-2.84492 0.5 0.22097" scale="0.002 0.002 0.002" rotation="0 100 0"
+            ></a-entity>
+            <a-entity
+                gltf-model="#ru"
+                id="ru"
+                class="item"
+                position="-1.58886 0.5 -2.6317" scale="0.8 0.8 0.8" rotation="0 45 0"
+            ></a-entity>
+            <a-entity
+                id="irimas"
+                gltf-model="#irimas"
+                class="item"
+                position="2.91891 0.5 -0.81471" scale="0.1 0.1 0.1" rotation="0 45 0"
+            ></a-entity>
+            <a-entity
+                id="amphiNord"
+                gltf-model="#amphiNord"
+                class="item"
+                position="-1.54935 0.5 2.06414" scale="2 2 2" rotation="0 -45 0"
+            ></a-entity>
+            <a-entity
+                id="fabLab"
+                gltf-model="#fabLab"
+                class="item"
+                position="0 0.5 3" scale="0.04 0.04 0.04" rotation="90 0 0"
+            ></a-entity>
+            <a-entity
+                id="fondVert"
+                gltf-model="#fondVert"
+                class="item"
+                position="1.99916 0.5 4.98037" scale="0.1 0.1 0.1" rotation="0 -55 0"
+            ></a-entity>
+            <a-entity
+                id="mac"
+                gltf-model="#mac"
+                class="item"
+                position="2.79994 0.5 1.13005" scale="0.006 0.006 0.006" rotation="0 160 0"
+            ></a-entity>
+            <a-entity
+                id="lpmt"
+                gltf-model="#lpmt"
+                class="item"
+                position="-14.384 0.5 2.381" scale="0.8 0.8 0.6" rotation="0 45 0"
+            ></a-entity>
+            <a-entity
+                id="pause"
+                gltf-model="#pause"
+                class="item"
+                position="-3.93377 -7.4 -0.04532" scale="4 4 4" rotation="0 45 0"
+            ></a-entity>
+            <a-entity
+                id="sgm"
+                gltf-model="#sgm"
+                class="item"
+                position="0.6267 0.7 -2.93117" scale="0.1 0.1 0.1" rotation="0 45 0"
+            ></a-entity>
+
+            <!-- Go back to lobby -->
+            <a-entity
+                    id="backButton"
+                    gltf-model="#arrow"
+                    position="-3 -1 0" scale="0.5 0.5 0.5" rotation="-90 0 0" visible="false"
+            ></a-entity>
+            <a-camera>
+                <a-cursor>
+            </a-camera>
+        </a-scene>
+
+        <script src="js"></script>
+    </body>
 </html>
