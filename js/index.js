@@ -26,6 +26,14 @@ const onItemClick = (event) => {
     goToItemLocation(itemId);
 };
 
+document.addEventListener("super-hands:click", function (event) {
+    const clickedEntity = event.detail.target;
+    const itemId = clickedEntity.getAttribute("id");
+    if (itemId) {
+        goToItemLocation(itemId);
+    }
+});
+
 /**
  * Go to an item location
  */
