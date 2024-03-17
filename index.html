@@ -91,17 +91,21 @@
                 position="-0.84492 0.5 0.22097" scale="0.002 0.002 0.002" rotation="0 100 0"
                 super-hands
             ></a-entity>
+            <a-box hoverable grabbable stretchable draggable droppable color="#ffb602" position="0 2 -1" id="movingbox"></a-box>
+            <a-box color="#f00" depth="0.2" height="0.2" width="0.2" position=" -0.5 1 -0.5" event-set__click="_target: #movingbox; color: #f00"></a-box>
             <a-entity
                 gltf-model="#ru"
                 id="ru"
                 class="item"
                 position="-1.58886 0.5 -2.6317" scale="0.8 0.8 0.8" rotation="0 45 0"
+                super-hands
             ></a-entity>
             <a-entity
                 id="irimas"
                 gltf-model="#irimas"
                 class="item"
                 position="2.91891 0.5 -0.81471" scale="0.1 0.1 0.1" rotation="0 45 0"
+                super-hands
             ></a-entity>
             <a-entity
                 id="amphiNord"
