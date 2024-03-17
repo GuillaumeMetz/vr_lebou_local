@@ -9,3 +9,12 @@
         }
     });
 });
+    document.querySelector('#backButton').addEventListener('click', function () {
+        document.querySelectorAll('.item').forEach(entity => {
+            entity.setAttribute('visible', 'true');
+        });
+        const arrow = document.querySelector('.arrow');
+        if (arrow) {
+            arrow.setAttribute('visible', 'false');
+        }
+    });
