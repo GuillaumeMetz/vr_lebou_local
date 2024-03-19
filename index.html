@@ -1,163 +1,185 @@
 <html lang="fr">
-    <head>
-        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.misc.min.js"></script>
-        <script src="https://unpkg.com/super-hands@^3.0.3/dist/super-hands.min.js"></script>
-        <script src="https://unpkg.com/aframe-event-set-component@^4.1.1/dist/aframe-event-set-component.min.js"></script>
-        <title>Visite Virtuelle IUT Mulhouse</title>
-    </head>
-    <body>
-        <a-scene id="scene" visible="true">
+<head>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.misc.min.js"></script>
+    <script src="https://unpkg.com/super-hands@^3.0.3/dist/super-hands.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.1.1/dist/aframe-event-set-component.min.js"></script>
+    <title>Visite Virtuelle IUT Mulhouse</title>
+</head>
+<body>
+<a-scene id="scene" visible="true">
 
-            <!-- The assets -->
-            <a-assets>
-                <!-- The imgs assets -->
-                <img id="lobbyBG" src="assets/scenes/1_lobby.jpg" />
-                <img id="buBG" src="assets/scenes/2_bu.jpg" />
-                <img id="ruBG" src="assets/scenes/3_ru.jpg" />
-                <img id="irimasBG" src="assets/scenes/4_irimas.jpg" />
-                <img id="amphiNordBG" src="assets/scenes/5_amphi_nord.jpg" />
-                <img id="fabLabBG" src="assets/scenes/7_fablab.jpg" />
-                <img id="fondVertBG" src="assets/scenes/8_fond_vert.jpg" />
-                <img id="macBG" src="assets/scenes/6_mac.jpg" />
-                <img id="lpmtBG" src="assets/scenes/9_lpmt.jpg" />
-                <img id="pauseBG" src="assets/scenes/10_pause.jpg" />
-                <img id="sgmBG" src="assets/scenes/11_sgm.jpg" />
+    <!-- The assets -->
+    <a-assets>
+        <!-- The imgs assets -->
+        <img id="lobbyBG" src="assets/scenes/1_lobby.jpg" />
+        <img id="buBG" src="assets/scenes/2_bu.jpg" />
+        <img id="ruBG" src="assets/scenes/3_ru.jpg" />
+        <img id="irimasBG" src="assets/scenes/4_irimas.jpg" />
+        <img id="amphiNordBG" src="assets/scenes/5_amphi_nord.jpg" />
+        <img id="fabLabBG" src="assets/scenes/7_fablab.jpg" />
+        <img id="fondVertBG" src="assets/scenes/8_fond_vert.jpg" />
+        <img id="macBG" src="assets/scenes/6_mac.jpg" />
+        <img id="lpmtBG" src="assets/scenes/9_lpmt.jpg" />
+        <img id="pauseBG" src="assets/scenes/10_pause.jpg" />
+        <img id="sgmBG" src="assets/scenes/11_sgm.jpg" />
 
-                <!-- The 3D models assets -->
-                <a-asset-item id="bu" src="assets/models/bu.glb"></a-asset-item>
-                <a-asset-item id="ru" src="assets/models/ru.glb"></a-asset-item>
-                <a-asset-item
-                    id="irimas"
-                    src="assets/models/irimas.glb"
-                ></a-asset-item>
-                <a-asset-item
-                    id="amphiNord"
-                    src="assets/models/amphi_nord.glb"
-                ></a-asset-item>
-                <a-asset-item
-                    id="fabLab"
-                    src="assets/models/fab_lab.glb"
-                ></a-asset-item>
-                <a-asset-item
-                    id="fondVert"
-                    src="assets/models/green_room.glb"
-                ></a-asset-item>
-                <a-asset-item
-                    id="mac"
-                    src="assets/models/mac_room.glb"
-                ></a-asset-item>
-                <a-asset-item
-                    id="lpmt"
-                    src="assets/models/lpmt.glb"
-                ></a-asset-item>
-                <a-asset-item
-                    id="pause"
-                    src="assets/models/pause_room.glb"
-                ></a-asset-item>
-                <a-asset-item
-                    id="sgm"
-                    src="assets/models/sgm.glb"
-                ></a-asset-item>
-                <a-asset-item
-                    id="arrow"
-                    src="assets/models/arrow.glb"
-                ></a-asset-item>
-            </a-assets>
+        <!-- The 3D models assets -->
+        <a-asset-item
+                id="bu"
+                src="assets/models/bu.glb">
+        </a-asset-item>
+        <a-asset-item
+                id="ru"
+                src="assets/models/ru.glb">
+        </a-asset-item>
+        <a-asset-item
+                id="irimas"
+                src="assets/models/irimas.glb"
+        ></a-asset-item>
+        <a-asset-item
+                id="amphiNord"
+                src="assets/models/amphi_nord.glb"
+        ></a-asset-item>
+        <a-asset-item
+                id="fabLab"
+                src="assets/models/fab_lab.glb"
+        ></a-asset-item>
+        <a-asset-item
+                id="fondVert"
+                src="assets/models/green_room.glb"
+        ></a-asset-item>
+        <a-asset-item
+                id="mac"
+                src="assets/models/mac_room.glb"
+        ></a-asset-item>
+        <a-asset-item
+                id="lpmt"
+                src="assets/models/lpmt.glb"
+        ></a-asset-item>
+        <a-asset-item
+                id="pause"
+                src="assets/models/pause_room.glb"
+        ></a-asset-item>
+        <a-asset-item
+                id="sgm"
+                src="assets/models/sgm.glb"
+        ></a-asset-item>
+        <a-asset-item
+                id="arrow"
+                src="assets/models/arrow.glb"
+        ></a-asset-item>
+    </a-assets>
 
-            <!-- Skybox -->
-            <a-sky src="#lobbyBG" id="skyboxbg"></a-sky>
+    <!-- Skybox -->
+    <a-sky src="#lobbyBG" id="skyboxbg"></a-sky>
 
-            <!-- VR interaction -->
-            <a-entity sphere-collider="objects: a-box" mixin="physics-hands" super-hands hand-controls="hand: left"></a-entity>
-            <a-entity sphere-collider="objects: a-box" mixin="physics-hands" super-hands hand-controls="hand: right"></a-entity>
+    <!-- VR interaction -->
+    <a-entity sphere-collider="objects: a-box" mixin="physics-hands" super-hands hand-controls="hand: left"></a-entity>
+    <a-entity sphere-collider="objects: a-box" mixin="physics-hands" super-hands hand-controls="hand: right"></a-entity>
 
-            <!-- Camera -->
-            <a-entity camera wasd-controls position="0 1 1"
-                      capture-mouse
-                      raycaster cursor="rayOrigin:mouse"
-                      body="type: static; shape: sphere; sphereRadius: 0.001"
-                      super-hands="colliderEvent: raycaster-intersection;
+    <!-- Camera -->
+    <a-entity camera wasd-controls position="0 1 1"
+              capture-mouse
+              raycaster cursor="rayOrigin:mouse"
+              body="type: static; shape: sphere; sphereRadius: 0.001"
+              super-hands="colliderEvent: raycaster-intersection;
                              colliderEventProperty: els;
                              colliderEndEvent:raycaster-intersection-cleared;
                              colliderEndEventProperty: clearedEls;">
-            </a-entity>
+    </a-entity>
 
-            <!-- The items in the lobby -->
-            <a-entity
-                    gltf-model="#bu"
-                    id="bu"
-                    class="item"
-                    position="-0.84492 0.5 0" scale="0.001 0.001 0.001" rotation="0 100 0"
-                    event-set__click="_target: #skyboxbg; src: #buBG"
-                    event-set__click="_target: #backButton; visible: true"
-            ></a-entity>
-            <a-box class="item" color="#f00" depth="0.2" height="0.2" width="0.2" position="-0.84492 0.5 0" event-set__click="_target: #skyboxbg; src: #buBG"></a-box>
-            <a-box position='0 0 -0.5' color='green' change-color-on-click=''></a-box>
-            <a-entity
-                gltf-model="#ru"
-                id="ru"
-                class="item"
-                position="-0.6 0.5 -0.6" scale="0.5 0.5 0.5" rotation="0 45 0"
-            ></a-entity>
-            <a-entity
-                id="irimas"
-                gltf-model="#irimas"
-                class="item"
-                position="0.65 0.5 -0.46" scale="0.05 0.05 0.05" rotation="0 45 0"
-            ></a-entity>
-            <a-entity
-                id="amphiNord"
-                gltf-model="#amphiNord"
-                class="item"
-                position="-0.6 0.5 0.8" scale="1 1 1" rotation="0 -45 0"
-            ></a-entity>
-            <a-entity
-                id="fabLab"
-                gltf-model="#fabLab"
-                class="item"
-                position="0 0.5 0.9" scale="0.02 0.02 0.02" rotation="90 0 0"
-            ></a-entity>
-            <a-entity
-                id="fondVert"
-                gltf-model="#fondVert"
-                class="item"
-                position="0.8 0.5 1.4" scale="0.05 0.05 0.05" rotation="0 -55 0"
-            ></a-entity>
-            <a-entity
-                id="mac"
-                gltf-model="#mac"
-                class="item"
-                position="0.7 0.5 0.5" scale="0.003 0.003 0.003" rotation="0 160 0"
-            ></a-entity>
-            <a-entity
-                id="lpmt"
-                gltf-model="#lpmt"
-                class="item"
-                position="-4.5 0.5 0.7" scale="0.4 0.4 0.4" rotation="0 45 0"
-            ></a-entity>
-            <a-entity
-                id="pause"
-                gltf-model="#pause"
-                class="item"
-                position="-0.8 -3.5 -0.19" scale="2 2 2" rotation="0 45 0"
-            ></a-entity>
-            <a-entity
-                id="sgm"
-                gltf-model="#sgm"
-                class="item"
-                position="0.2 0.7 -0.6" scale="0.05 0.05 0.05" rotation="0 45 0"
-            ></a-entity>
+    <!-- The items in the lobby -->
+    <a-entity
+            gltf-model="#bu"
+            id="bu"
+            class="item"
+            position="-0.84492 0.5 0" scale="0.001 0.001 0.001" rotation="0 100 0"
+            event-set__click="_target: #skyboxbg; src: #buBG"
+    ></a-entity>
+    <a-box class="item" color="#f00" depth="0.2" height="0.2" width="0.2" position="-0.87679 0.738 0.1316" event-set__click="_target: #skyboxbg; src: #buBG" opacity="0" scale="1 1.77 1"></a-box>
+    <a-entity
+            gltf-model="#ru"
+            id="ru"
+            class="item"
+            position="-0.6 0.5 -0.6" scale="0.5 0.5 0.5" rotation="0 45 0"
+            event-set__click="_target: #skyboxbg; src: #ruBG"
+    ></a-entity>
+    <a-box class="item" color="#f00" depth="0.2" height="0.2" width="0.2" position="-0.57493 0.56552 -0.55234" event-set__click="_target: #skyboxbg; src: #ruBG" opacity="0" scale="1 1.77 1"></a-box>
+    <a-entity
+            id="irimas"
+            gltf-model="#irimas"
+            class="item"
+            position="0.65 0.5 -0.46" scale="0.05 0.05 0.05" rotation="0 45 0"
+            event-set__click="_target: #skyboxbg; src: #irimasBG"
+    ></a-entity>
+    <a-box class="item" color="#f00" depth="0.2" height="0.2" width="0.2" position="0.65439 0.566 -0.48017" event-set__click="_target: #skyboxbg; src: #irimasBG" opacity="0" scale="1 1.77 1"></a-box>
+    <a-entity
+            id="amphiNord"
+            gltf-model="#amphiNord"
+            class="item"
+            position="-0.6 0.5 0.8" scale="1 1 1" rotation="0 -45 0"
+            event-set__click="_target: #skyboxbg; src: #amphiNordBG"
+    ></a-entity>
+    <a-box class="item" color="#f00" depth="0.2" height="0.2" width="0.2" position="-0.88964 0.61493 0.866" event-set__click="_target: #skyboxbg; src: #amphiNordBG" opacity="0" scale="2.46 1.77 0.84" rotation="0 -45 0"></a-box>
+    <a-entity
+            id="fabLab"
+            gltf-model="#fabLab"
+            class="item"
+            position="0 0.5 0.9" scale="0.02 0.02 0.02" rotation="90 0 0"
+            event-set__click="_target: #skyboxbg; src: #fabLabBG"
+    ></a-entity>
+    <a-box class="item" color="#f00" depth="0.2" height="0.2" width="0.2" position="-0.00978 0.566 0.8659" event-set__click="_target: #skyboxbg; src: #fabLabBG" opacity="0" scale="2.46 1.77 0.84"></a-box>
+    <a-entity
+            id="fondVert"
+            gltf-model="#fondVert"
+            class="item"
+            position="0.8 0.5 1.4" scale="0.05 0.05 0.05" rotation="0 -55 0"
+            event-set__click="_target: #skyboxbg; src: #fondVertBG"
+    ></a-entity>
+    <a-box class="item" color="#f00" depth="0.2" height="0.2" width="0.2" position="0.76805 0.566 0.08641" event-set__click="_target: #skyboxbg; src: #fondVertBG" opacity="0" scale="1 1.77 1"></a-box>
+    <a-entity
+            id="mac"
+            gltf-model="#mac"
+            class="item"
+            position="0.7 0.5 0.5" scale="0.003 0.003 0.003" rotation="0 160 0"
+            event-set__click="_target: #skyboxbg; src: #macBG"
+    ></a-entity>
+    <a-box class="item" color="#f00" depth="0.2" height="0.2" width="0.2" position="0.73795 0.566 0.51928" event-set__click="_target: #skyboxbg; src: #macBG" opacity="0" scale="1.16 1.77 1.45"></a-box>
+    <a-entity
+            id="lpmt"
+            gltf-model="#lpmt"
+            class="item"
+            position="-4.5 0.5 0.7" scale="0.4 0.4 0.4" rotation="0 45 0"
+            event-set__click="_target: #skyboxbg; src: #lpmtBG"
+    ></a-entity>
+    <a-entity
+            id="pause"
+            gltf-model="#pause"
+            class="item"
+            position="-0.8 -3.5 -0.19" scale="2 2 2" rotation="0 45 0"
+            event-set__click="_target: #skyboxbg; src: #pauseBG"
+    ></a-entity>
+    <a-box class="item" color="#f00" depth="0.2" height="0.2" width="0.2" position="-0.22924 0.566 -0.79269" event-set__click="_target: #skyboxbg; src: #pauseBG" opacity="0" scale="1 1.77 1"></a-box>
+    <a-entity
+            id="sgm"
+            gltf-model="#sgm"
+            class="item"
+            position="0.2 0.7 -0.6" scale="0.05 0.05 0.05" rotation="0 45 0"
+            event-set__click="_target: #skyboxbg; src: #sgmBG"
+    ></a-entity>
+    <a-box class="item" color="#f00" depth="0.2" height="0.2" width="0.2" position="0.20595 0.566 -0.64334" event-set__click="_target: #skyboxbg; src: #sgmBG" opacity="0" scale="1 1.77 1"></a-box>
 
-            <!-- Go back to lobby -->
-            <a-entity
-                    id="backButton"
-                    gltf-model="#arrow"
-                    class="arrow"
-                    position="-0.5 -0.2 0" scale="0.4 0.4 0.4" rotation="-90 0 0" visible="false"
-                    event-set__click="_target: #skyboxbg; src: #lobbyBG"
-            ></a-entity>
-        </a-scene>
-        <script src="js"></script>
-    </body>
+    <!-- Go back to lobby -->
+    <a-entity
+            id="backButton"
+            gltf-model="#arrow"
+            class="arrow"
+            position="-0.25 -0.2 -0.1" scale="0.4 0.4 0.4" rotation="-90 0 0"
+            event-set__click="_target: #skyboxbg; src: #lobbyBG"
+    ></a-entity>
+    <a-box class="item" color="#f00" depth="0.2" height="0.2" width="0.2" position="-0.2598 -0.27309 0.10707" event-set__click="_target: #skyboxbg; src: #lobbyBG" opacity="0" scale="3.18 1.06 3.11" rotation="" material="" geometry=""></a-box>
+</a-scene>
+<script src="js"></script>
+</body>
 </html>
